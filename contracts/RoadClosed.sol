@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-3.0
 
-pragma solidity 0.8.7;
+pragma solidity 0.8.17;
 
 // Become the owner of the contract
 // Change the value of hacked to true

